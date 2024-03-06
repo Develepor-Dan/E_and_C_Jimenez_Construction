@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 
 const NavMenu = () => {
     return (
-        <Nav className="d-flex justify-content-end " activeKey="/">
+        <Nav className="d-flex justify-content-center " activeKey="/">
         <Nav.Item>
             <Nav.Link href="/#services">Services</Nav.Link>
         </Nav.Item>

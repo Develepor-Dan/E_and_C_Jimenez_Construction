@@ -1,4 +1,13 @@
 
+
+/* Header Sytling */
+
+a.nav-link {
+    color: #ba0a0a;
+    font-family: fantasy;
+}
+
+
 /* Hero Styling */
 
 .carousel-caption {
