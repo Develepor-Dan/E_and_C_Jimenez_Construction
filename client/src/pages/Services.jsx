@@ -13,17 +13,12 @@ const Services = () => {
             <h1>Our Services</h1>
             <p>We offer a wide range of construction services to meet your needs:</p>
             <ul>
-                <li>Residential Construction</li>
-                <li>Commercial Construction</li>
+                <li>Resedential Framing</li>
                 <li>Remodeling and Renovation</li>
-                <li>General Contracting</li>
-                <li>Project Management</li>
-                <li>Interior Design</li>
-                <li>Custom Home Building</li>
-                <li>Landscaping and Exterior Design</li>
-                <li>Foundation Repair</li>
-                <li>Roofing and Siding</li>
-                <li>...and much more</li>
+                <li>Flooring</li>
+                <li>Exterior Door and Window Installation</li>
+                <li>Siding</li>
+                <li>Porch / Deck</li>
             </ul>
             <p>Contact us today to discuss your project needs!</p>
             </section>
