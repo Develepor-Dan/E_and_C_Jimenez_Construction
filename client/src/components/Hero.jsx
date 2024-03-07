@@ -1,40 +1,42 @@
-import React from 'react';
+// Hero.jsx
+import React, {useState} from 'react';
+import LazyLoad from 'react-lazy-load';
 import Carousel from 'react-bootstrap/Carousel'
 import Image from 'react-bootstrap/Image'
-// import ../style.css
-//container -fluid
+import Porch from '../assets/Porch.png'
+import HouseFraming from '../assets/HouseFraming.png'
 
 const Hero = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
 
+    // Carousel Items
+    const carouselItems = [
+        {image: Porch,
+        caption: 'Porch',},
+        {image: HouseFraming,
+        caption: 'Residential Framing,'},
+    ];
 
 return(
-    <div>
-<Carousel className='d-flex flex-row '>
- <Carousel.Item className=''>
-    <Image
-      className="d-flex w-100"
-      src="data:image/jpeg;base64,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"
-      alt="Framing Image" fluid='true'
-    />
-
-    <Carousel.Caption className=''>
-      <h3>Remodeling</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-{/* Second Slide */}
-<Carousel.Item>
-<img
-  className="d-flex w-100"
-  src="../House-Framing.JPG"
-  alt=""
-/>
-<Carousel.Caption>
-  <h3>Framing</h3>
-  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-</Carousel.Caption>
-</Carousel.Item>
-
+    <div id='Hero' className='pb-5'>
+<Carousel activeIndex={activeIndex} onSelect={setActiveIndex} className='d-flex  img-fluid'>
+    {carouselItems.map((item, index) => (
+        <Carousel.Item key={index}>
+        {/* Lazy load images */}
+        <LazyLoad height={400}>
+          <Image
+            className="d-block w-100"
+            src={item.image}
+            alt={`Slide ${index}`}
+            fluid
+          />
+        </LazyLoad>
+        <Carousel.Caption>
+          <h3>{item.caption}</h3>
+          {/* Add caption content */}
+        </Carousel.Caption>
+      </Carousel.Item>
+    ))}
 </Carousel>
 </div>
 
@@ -49,7 +51,7 @@ export default Hero;
 
 
 // Slide Layout
-{/* <Carousel.Item>
+/* <Carousel.Item interval={4000}>
 <img
   className="d-flex w-100"
   src=""
@@ -59,4 +61,4 @@ export default Hero;
   <h3>Slide label</h3>
   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 </Carousel.Caption>
-</Carousel.Item> */}
+</Carousel.Item> */
