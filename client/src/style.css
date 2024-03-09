@@ -27,12 +27,25 @@ a.carousel-control-next {
     max-height: 400px;
 }
 
+.LazyLoad {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
+}
+
 /* For Smaller Screens */
-@media  screen and (max-width: 700px) {
+@media  screen and (max-width: 699px) {
     .carousel-caption{
         display:contents;
         color: black !important ;
         background-color: aqua;
         padding-top: 6px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        top:auto;
+
     }
 }

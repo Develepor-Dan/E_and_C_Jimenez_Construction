@@ -19,11 +19,11 @@ const Hero = () => {
 
 return(
     <div id='Hero' className='pb-5'>
-<Carousel activeIndex={activeIndex} onSelect={setActiveIndex} className='d-flex  img-fluid'>
+<Carousel fade='true' activeIndex={activeIndex} onSelect={setActiveIndex} className='d-flex img-fluid'>
     {carouselItems.map((item, index) => (
         <Carousel.Item key={index}>
         {/* Lazy load images */}
-        <LazyLoad height={400}>
+        <LazyLoad >
           <Image
             className="d-block w-100"
             src={item.image}
